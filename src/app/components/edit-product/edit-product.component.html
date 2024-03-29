@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="container">
+    <h1 class="mt-4 mb-3">Update Product</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updateProduct()">
+          <div class="mb-3">
+            <label for="productId" class="form-label">Id #</label>
+            <input
+              type="text"
+              class="form-control bg-light"
+              id="productId"
+              name="productId"
+              aria-describedby="Product Id"
+              [(ngModel)]="product.productId"
+              disabled="true"
+              readonly="true"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="productName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="productName"
+              name="productName"
+              aria-describedby="Product Name"
+              [(ngModel)]="product.name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="productCategory" class="form-label">Category</label>
+            <input
+              type="text"
+              class="form-control"
+              id="productCategory"
+              name="productCategory"
+              aria-describedby="Product Category"
+              [(ngModel)]="product.category"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="productColor" class="form-label">Color</label>
+            <input
+              type="text"
+              class="form-control"
+              id="productColor"
+              name="productColor"
+              aria-describedby="Product Color"
+              [(ngModel)]="product.color"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="productPrice" class="form-label">Price</label>
+            <input
+              type="number"
+              class="form-control"
+              id="productPrice"
+              name="productPrice"
+              aria-describedby="Product Price"
+              [(ngModel)]="product.price"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary me-2">Save</button>
+          <button class="btn btn-light">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

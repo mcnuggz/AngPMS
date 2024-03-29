@@ -1,0 +1,55 @@
+<div class="container">
+  <h1 class="mt-4 mb-3">Add New Product</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="addProduct()">
+        <div class="mb-3">
+          <label for="productName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            name="productName"
+            aria-describedby="Product Name"
+            [(ngModel)]="newProduct.name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="productCategory" class="form-label">Category</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productCategory"
+            name="productCategory"
+            aria-describedby="Product Category"
+            [(ngModel)]="newProduct.category"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="productColor" class="form-label">Color</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productColor"
+            name="productColor"
+            aria-describedby="Product Color"
+            [(ngModel)]="newProduct.color"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="productPrice" class="form-label">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="productPrice"
+            name="productPrice"
+            aria-describedby="Product Price"
+            [(ngModel)]="newProduct.price"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
